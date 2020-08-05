@@ -11,7 +11,8 @@ const forCast = (longitude, latitude, callback) => {
                 callback('Unable to find location', undefined)
             }else{
                 callback(undefined, body.current.weather_descriptions[0]+'. It is currently ' 
-                + body.current.temperature+ ' out there. There is a '+  body.current.precip + '% chance of rain.')
+                + body.current.temperature + ' degree out there. It feels like '+ body.current.feelslike + ' degree out.'
+                 +' The humidity is '+  body.current.humidity + '%.')
             }
         })
     })
